@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input, select, button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.finalizar-btn {
+    background-color: #2196F3;
+}
+
+.finalizar-btn:hover {
+    background-color: #0b7dda;
+}
+
+.imprimir-btn {
+    background-color: #ff9800;
+}
+
+.imprimir-btn:hover {
+    background-color: #e68a00;
+}
+
+#listaProdutos, #itensVenda {
+    margin-top: 15px;
+}
+
+.produto-item, .venda-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.total-section {
+    text-align: right;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+#notaFiscalContent {
+    border: 1px dashed #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fffef7;
+}
+
+.nota-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.nota-total {
+    font-weight: bold;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #notaFiscal, #notaFiscal * {
+        visibility: visible;
+    }
+    #notaFiscal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .imprimir-btn {
+        display: none;
+    }
+}
